@@ -13,7 +13,6 @@ export default function Home() {
       try {
         setLoading(true);
         const unescoData = await loadUnescoData();
-        console.log(unescoData);
         setData(unescoData);
       } catch (err) {
         setError("Failed to load UNESCO data");
