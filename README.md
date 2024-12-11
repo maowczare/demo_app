@@ -12,6 +12,10 @@ Frontend technologies used:
 - shadcn/ui (https://ui.shadcn.com/) - for UI components without external library dependencies
 - Tailwind CSS - for styling
 
+Backend technologies used:
+- NodeJS - for data processing
+- xml2js - for parsing XML data
+
 Most important files:
 - `src/app/page.tsx` - main page component - that loads data and renders main layout component
 - `src/components/CardLayout` - main component that generates data layout
@@ -31,4 +35,7 @@ npm run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+Compiled and tested on M3 Macbook and Chrome.
+
 
