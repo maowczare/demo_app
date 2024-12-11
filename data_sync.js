@@ -49,7 +49,9 @@ async function fetchAndConvert() {
     const filteredData = filterFields(jsonObj);
     const jsonString = JSON.stringify(filteredData, null, 2);
     await writeFile("public/data.json", jsonString, "utf8");
-    console.log("Data has been fetched, converted, and saved to data.json");
+    console.log(
+      "Data has been fetched, converted, and saved to public/data.json",
+    );
   } catch (err) {
     console.error("Error:", err.message);
   }

@@ -51,6 +51,7 @@ export const SiteCard = ({
         <div className="flex items-center gap-4">
           <h2
             className="font-semibold"
+            // necessary because of HTML in data strings
             dangerouslySetInnerHTML={{
               __html: site || "",
             }}
@@ -59,6 +60,7 @@ export const SiteCard = ({
         </div>
         <div
           className="text-sm"
+          // necessary because of HTML in data strings
           dangerouslySetInnerHTML={{
             __html: description || "",
           }}
