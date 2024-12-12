@@ -1,3 +1,4 @@
+"use client";
 import { SiteCard } from "@/components/SiteCard/SiteCard";
 import {
   Pagination,
@@ -8,10 +9,10 @@ import { UnescoSite } from "@/lib/data";
 import { useMemo, useState } from "react";
 
 interface CardLayoutProps {
-  data: UnescoSite[];
+  siteData: UnescoSite[];
 }
 
-export const CardLayout = ({ data }: CardLayoutProps) => {
+export const CardLayout = ({ siteData }: CardLayoutProps) => {
   const itemsPerPageDefaultValue = 10;
   const [currentPage, setCurrentPage] = useState(1);
   const [sitesPerPage, setSitesPerPage] = useState(itemsPerPageDefaultValue);
@@ -20,9 +21,9 @@ export const CardLayout = ({ data }: CardLayoutProps) => {
   const filteredData = useMemo(
     () =>
       selectedCategory === "All"
-        ? data
-        : data.filter((item) => item.category[0] === selectedCategory),
-    [data, selectedCategory],
+        ? siteData
+        : siteData.filter((item) => item.category[0] === selectedCategory),
+    [siteData, selectedCategory],
   );
 
   const { currentSites, totalPages } = useMemo(() => {
